@@ -1,0 +1,9 @@
+[PropertyInfo]
+name,String,false,false,name,name,true,<default>
+startUp,boolean,false,false,startUp,startUp,true,<default>
+generatedFiles,java.util.ArrayList,false,false,generatedFiles,generatedFiles,true,<default>
+[IconNames]
+
+
+
+

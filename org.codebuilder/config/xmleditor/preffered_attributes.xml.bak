@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<attributes>
+	<attribute name="path"/>
+	<attribute name="name"/>
+	<attribute name="key"/>
+</attributes>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+All the objects placed here can be found under the $sys.lib or $sys variable
+in the context of the templates. For instance an object named x can
+be invoked as $sys.lib.x or $sys.x
+-->
+<tools>
+	<tool name="filesystem" class="org.codebuilder.util.FileSystem"/>
+	<tool name="obj" class="org.codebuilder.util.ObjectUtilities"/>
+        <tool name="str" class="org.codebuilder.util.StringUtilities"/>
+	<tool name="xml" class="org.codebuilder.util.XML"/>
+</tools>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<documents>
+	<document class="org.codebuilder.models.xml.XMLModel"/>
+	<document class="org.codebuilder.models.uml.uml14.UML14Model"/>
+	<document class="org.codebuilder.models.xsd.XSDModel"/>
+	<document class="org.codebuilder.models.mof2.MOF2Model"/>
+	<document class="org.codebuilder.models.mof.MOFModel"/>
+	<document class="org.codebuilder.models.petal.PetalModel"/>
+</documents>

@@ -1,0 +1,22 @@
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by dsk (dsk) -->
+<highlighters>
+	<highlighter language="vtl" extensions="vtl">
+		<highlightable name="vtl_comment" expression="##[^\n]*" color="C0C0C0"/>
+		<highlightable name="vtl_comment" expression="#\*.*?\*#" color="C0C0C0"/>
+		<highlightable name="vtl_variables" expression="\$" color="FF0000"/>
+		<highlightable name="vtl_keywords" expression="#(foreach|end|if|else|elseif|include|set|in|set|parse|stop|macro)" color="0000FF"/>
+	</highlighter>
+	<highlighter language="java" extensions="java">
+		<highlightable name="comment" expression="//[^\n]*" color="008000"/>
+		<highlightable name="comment" expression="/\*.*?\*/" color="008000"/>
+		<highlightable name="keywords" expression="import|interface|package|class|private|public|int|boolean|String|for|while|instanceof|this|extends|implements" color="000080"/>
+	</highlighter>
+	<highlighter language="vb" extensions="cls,bas">
+		<highlightable name="comment" expression="&apos;[^\n]*" color="008000"/>
+		<highlightable name="keywords" expression="import|package|class|private|public|int|boolean|String|for|while|instanceof|this" color="000080"/>
+	</highlighter>
+	<highlighter language="xml" extensions="html1,xml1,xsd1">
+		<highlightable name="comment" expression="&lt;!--.*--&gt;" color="008000"/>
+		<highlightable name="tagnames" expression="&lt;[^ ]*|[\?]?&gt;" color="800000"/>
+	</highlighter>
+</highlighters>

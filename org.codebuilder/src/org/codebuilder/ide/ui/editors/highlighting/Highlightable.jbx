@@ -1,0 +1,9 @@
+[PropertyInfo]
+name,String,false,false,name,name,true,<default>
+expression,String,false,false,expression,expression,true,<default>
+color,java.awt.Color,false,false,Color,Color,true,<default>
+[IconNames]
+
+
+
+

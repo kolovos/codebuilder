@@ -1,0 +1,15 @@
+[PropertyInfo]
+context,Context,false,false, , ,true,<default>
+generatedFiles,List,false,false, , ,true,<default>
+globalContext,Context,false,false, , ,false,<default>
+output,String,false,false, , ,false,<default>
+overwrite,boolean,false,false,overwrite,overwrite,true,<default>
+path,String,false,false, , ,true,<default>
+preserveHandWrittenRegions,boolean,false,false, , ,false,<default>
+target,String,false,false, , ,true,<default>
+template,org.apache.velocity.Template,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

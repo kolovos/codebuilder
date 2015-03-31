@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<editors>
+	<editor class="org.codebuilder.ide.ui.editors.TemplateEditor"/>
+	<editor class="org.codebuilder.ide.ui.editors.xmleditor.XmlEditor"/>
+	<editor class="org.codebuilder.ide.ui.editors.TextEditor"/>
+</editors>

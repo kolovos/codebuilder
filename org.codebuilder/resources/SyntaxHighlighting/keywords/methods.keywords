@@ -1,0 +1,11 @@
+0x000080
+0xFFFFFF
+clone
+getClass
+notifyAll
+equals
+hashCode
+toString
+finalize
+notify
+wait

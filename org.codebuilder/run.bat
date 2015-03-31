@@ -1,0 +1,1 @@
+java -classpath "CodeBuilder.jar;tools;tools/classes;plugins;plugins/classes" org.codebuilder.ide.ui.IDE

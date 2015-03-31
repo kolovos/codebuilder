@@ -1,0 +1,13 @@
+[PropertyInfo]
+ERROR,FeedbackSeverity,false,false, , ,false,<default>
+FATAL_ERROR,FeedbackSeverity,false,false, , ,false,<default>
+icon,ImageIcon,false,false, , ,false,<default>
+INFORMATION,FeedbackSeverity,false,false, , ,false,<default>
+SUCCESS,FeedbackSeverity,false,false, , ,false,<default>
+value,String,false,false, , ,false,<default>
+WARNING,FeedbackSeverity,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

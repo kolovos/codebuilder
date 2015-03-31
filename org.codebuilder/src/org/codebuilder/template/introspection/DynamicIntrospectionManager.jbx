@@ -1,0 +1,12 @@
+[PropertyInfo]
+configuredClasses,Class[],false,false, , ,true,<default>
+instance,DynamicIntrospectionManager,false,false, , ,false,<default>
+iteratorProviders,ArrayList,false,false, , ,false,<default>
+methods,ArrayList,false,false, , ,false,<default>
+propertyGets,ArrayList,false,false, , ,false,<default>
+propertySets,ArrayList,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

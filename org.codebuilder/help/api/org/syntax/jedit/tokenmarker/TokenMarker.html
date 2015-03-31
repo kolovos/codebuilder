@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class org.syntax.jedit.tokenmarker.TokenMarker</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">org.syntax.jedit.tokenmarker</FONT>
+<BR>Class TokenMarker</H2>
+<DL>
+<DT>public abstract class <B>TokenMarker</B>
+</DL>
+<DL><DD>A token marker that splits lines of text into tokens. Each token carries a length field and an indentification tag that can be mapped to a color for painting that token.<p> For performance reasons, the linked list of tokens is reused after each line is tokenized. Therefore, the return value of <code>markTokens</code> should only be used for immediate painting. Notably, it cannot be cached.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Version:</B><DD>$Id: TokenMarker.java,v 1.32 1999/12/13 03:40:30 sp Exp $</DD>
+<DT><B>Author:</B><DD>Slava Pestov</DD>
+<DT><B>See Also:</B><DD>org.syntax.jedit.Token</DD>
+</DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Field Detail</B>
+</FONT></TD></TR></TABLE>
+
+<H3>firstToken</H3>
+<PRE>
+protected Token <B>firstToken</B></PRE>
+<DL><DD>The first token in the list. This should be used as the return value from <code>markTokens()</code>.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>lastToken</H3>
+<PRE>
+protected Token <B>lastToken</B></PRE>
+<DL><DD>The last token in the list. New tokens are added here. This should be set to null before a new line is to be tokenized.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>lineInfo</H3>
+<PRE>
+protected LineInfo[] <B>lineInfo</B></PRE>
+<DL><DD>An array for storing information about lines. It is enlarged and shrunk automatically by the <code>insertLines()</code> and <code>deleteLines()</code> methods.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>length</H3>
+<PRE>
+protected int <B>length</B></PRE>
+<DL><DD>The number of lines in the model being tokenized. This can be less than the length of the <code>lineInfo</code> array.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>lastLine</H3>
+<PRE>
+protected int <B>lastLine</B></PRE>
+<DL><DD>The last tokenized line.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>nextLineRequested</H3>
+<PRE>
+protected boolean <B>nextLineRequested</B></PRE>
+<DL><DD>True if the next line should be painted.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B>
+</FONT></TD></TR></TABLE>
+
+<H3>TokenMarker</H3>
+<PRE>
+protected <B>TokenMarker</B>()</PRE>
+<DL><DD>Creates a new <code>TokenMarker</code>. This DOES NOT create a lineInfo array; an initial call to <code>insertLines()</code> does that.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B>
+</FONT></TD></TR></TABLE>
+
+<H3>markTokens</H3>
+<PRE>
+public Token <B>markTokens</B>(Segment&nbsp;line,
+                        int&nbsp;lineIndex)</PRE>
+<DL><DD>A wrapper for the lower-level <code>markTokensImpl</code> method that is called to split a line up into tokens.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>line</CODE> - The line</DD>
+<DD><CODE>lineIndex</CODE> - The line number</DD>
+</DL>
+<HR>
+
+<H3>markTokensImpl</H3>
+<PRE>
+protected abstract byte <B>markTokensImpl</B>(byte&nbsp;token,
+                                       Segment&nbsp;line,
+                                       int&nbsp;lineIndex)</PRE>
+<DL><DD>An abstract method that splits a line up into tokens. It should parse the line, and call <code>addToken()</code> to add syntax tokens to the token list. Then, it should return the initial token type for the next line.<p> For example if the current line contains the start of a multiline comment that doesn't end on that line, this method should return the comment token type so that it continues on the next line.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>token</CODE> - The initial token type for this line</DD>
+<DD><CODE>line</CODE> - The line to be tokenized</DD>
+<DD><CODE>lineIndex</CODE> - The index of the line in the document, starting at 0</DD>
+<DT><B>Returns:</B><DD>The initial token type for the next line</DD>
+</DL>
+<HR>
+
+<H3>supportsMultilineTokens</H3>
+<PRE>
+public boolean <B>supportsMultilineTokens</B>()</PRE>
+<DL><DD>Returns if the token marker supports tokens that span multiple lines. If this is true, the object using this token marker is required to pass all lines in the document to the <code>markTokens()</code> method (in turn).<p> The default implementation returns true; it should be overridden to return false on simpler token markers for increased speed.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>insertLines</H3>
+<PRE>
+public void <B>insertLines</B>(int&nbsp;index,
+                        int&nbsp;lines)</PRE>
+<DL><DD>Informs the token marker that lines have been inserted into the document. This inserts a gap in the <code>lineInfo</code> array.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>index</CODE> - The first line number</DD>
+<DD><CODE>lines</CODE> - The number of lines</DD>
+</DL>
+<HR>
+
+<H3>deleteLines</H3>
+<PRE>
+public void <B>deleteLines</B>(int&nbsp;index,
+                        int&nbsp;lines)</PRE>
+<DL><DD>Informs the token marker that line have been deleted from the document. This removes the lines in question from the <code>lineInfo</code> array.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>index</CODE> - The first line number</DD>
+<DD><CODE>lines</CODE> - The number of lines</DD>
+</DL>
+<HR>
+
+<H3>getLineCount</H3>
+<PRE>
+public int <B>getLineCount</B>()</PRE>
+<DL><DD>Returns the number of lines in this token marker.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>isNextLineRequested</H3>
+<PRE>
+public boolean <B>isNextLineRequested</B>()</PRE>
+<DL><DD>Returns true if the next line should be repainted. This will return true after a line has been tokenized that starts a multiline token that continues onto the next line.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>ensureCapacity</H3>
+<PRE>
+protected void <B>ensureCapacity</B>(int&nbsp;index)</PRE>
+<DL><DD>Ensures that the <code>lineInfo</code> array can contain the specified index. This enlarges it if necessary. No action is taken if the array is large enough already.<p> It should be unnecessary to call this under normal circumstances; <code>insertLine()</code> should take care of enlarging the line info array automatically.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>index</CODE> - The array index</DD>
+</DL>
+<HR>
+
+<H3>addToken</H3>
+<PRE>
+protected void <B>addToken</B>(int&nbsp;length,
+                        byte&nbsp;id)</PRE>
+<DL><DD>Adds a token to the token list.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>length</CODE> - The length of the token</DD>
+<DD><CODE>id</CODE> - The id of the token</DD>
+</DL>
+<HR>
+
+</BODY>
+</HTML>

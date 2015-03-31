@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<introspectors>
+	<introspector class="org.codebuilder.introspectors.XmlIntrospector">
+</introspectors>

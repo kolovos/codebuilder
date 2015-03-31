@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+  <plugin class="org.codebuilder.ide.plugins.demo.DemoPlugin" />
+  <plugin class="org.codebuilder.ide.plugins.demo.PersistentPlugin" />
+</plugins>
+

@@ -1,0 +1,65 @@
+Known issues:
+--------------------------------------------------------------
+
+Make an xml config in which all the types of model + implementing class (implements Model) are declared
+
+Make an xml config with all the editors
+
+Add an accept(Document doc) method to the IEditor interface
+
+On rightclick a model show the editors that satisfy the accept method (e.g. xml smarteditor, text editor)
+
+Make the filelist for help
+
+Add many introspections (xml configuration file)
+
+Make template and model panel update after project run
+
+Add menu item Template Properties
+	User should define if pretty printing will take place
+	      ''           if handwritten region detection will take place
+              ''           if overwritting is allowed
+
+Change the new/add/rename template/model/groups UI's to extend the AbstractDialog
+
+Implement the save debug/system log window contents to a file
+
+Make the object model of the IDE cleaner. Decide if getters or references will be used
+
+Check what happens if the wrong type of project is opened - add a special type for project files??
+
+See how dbl-click in a project file can open EcfgIDE - Provide a wizard at startup which look
+if it has the extensions and if not, it takes them
+
+Warn the user if he/she is about to open a file larger than XXX KB in the editor view
+
+Look for other types of models (???)
+
+Implement find-replace
+
+Experiment with JavaHelp and write some help
+
+Build an xml serialization component based on reflection. Use plural analysis etc (idiom)
+
+Configure plug-ins action
+
+Configure custom objects action
+
+version 1.1
+--------------------------------------------------------------
+Add last opened MRU
+	done - class LastRecentlyUsed
+	done - Sub-Menu under project menu
+
+Done Add rename/open/close/save icons
+
+Done Add project related icons
+
+Done - Change OpenProjectAction to BrowseOpenProjectAction and Make OpenProject action more abstract to
+support reopening
+
+Done - Make project run in a new thread so that the UI does not freeze
+
+Done -Introduce a $progress variable to the context to
+allow the user to show output to the progress modal window
+and provide a cancel button in the progress modal window

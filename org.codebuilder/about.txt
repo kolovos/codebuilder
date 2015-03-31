@@ -1,0 +1,6 @@
+CodeBuilder v1.0
+Author: Dimitrios Kolovos
+Licence: GPL
+
+Contains software from the Jakarta Velocity Project (http://jakarta.apache.org/velocity), Xerces, Jaxen (http://www.jaxen.org), JDOM (http://www.jdom.org) and possibly others
+

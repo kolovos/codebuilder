@@ -1,0 +1,11 @@
+[PropertyInfo]
+extensions,String[],false,false, , ,false,<default>
+highlightables,ArrayList,false,false, , ,true,<default>
+kit,Kit,false,false, , ,true,<default>
+language,String,false,false,language,language,true,<default>
+thiz,Highlighter,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

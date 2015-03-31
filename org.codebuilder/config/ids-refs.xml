@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!--
+	Configuration file for model ids and idrefs
+	Each <id> element specifies an attribute name which will be treated as an id
+	Each <idref> element specifies an attribute name which will be treated as an idref
+
+	Example:
+
+	Under the default configuration consider the following xml model:
+
+	<class name="Customer" extends="BusinessObject">
+		...
+	</class>
+	
+	<class name="Invoice">
+		<field type="Customer"/>
+	</class>
+
+	if $field is the nested element inside the Invoice element, then $field.type is a 
+	reference (because the name of the attribute is declared as an idref below) and 
+	therefore the expression $field.type.extends will produce the output "BusinessObject" 
+-->
+
+<config>
+	<id name="name"/>
+	<id name="id"/>
+	<idref name="type"/>
+	<idref name="idref"/>
+	<idrefs name="extends"/>
+	<idrefs name="idrefs"/>
+	<idrefs name="supertypes"/>
+	<idrefs name="superClass"/>
+</config>

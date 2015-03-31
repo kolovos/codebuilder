@@ -1,0 +1,8 @@
+<introspectors>
+	<introspector class="org.omg.uml.foundation.core.Element">
+		<propertyGet class="org.codebuilder.models.uml.uml14.introspection.UmlElementPropertyGet"/>
+		<propertySet class="org.codebuilder.models.uml.uml14.introspection.UmlElementPropertySet"/>
+		<method class="org.codebuilder.models.uml.uml14.introspection.UmlElementMethod"/>
+		<iteratorProvider class="org.codebuilder.models.uml.uml14.introspection.UmlElementIteratorProvider"/>
+	</introspector>
+</introspectors>

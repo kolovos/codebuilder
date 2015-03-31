@@ -1,0 +1,11 @@
+[PropertyInfo]
+booleanValue,boolean,false,false, , ,true,<default>
+description,String,false,false, , ,false,<default>
+fixed,boolean,false,false, , ,false,<default>
+name,String,false,false, , ,false,<default>
+value,Object,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

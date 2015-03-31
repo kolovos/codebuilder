@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<variables>
+	<variable name="project" description="The current project structure"/>
+	<variable name="debug" description="The text area in the bottom of the IDE"/>
+	<variable name="out" description="The System.out print stream"/>
+</variables>

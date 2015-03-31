@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<directives>
+	<directive name="foreach" value="foreach($ in $)" moveback="6" description="Loops a collection, array, enumeration, etc"/>
+	<directive name="if" value="if($)" moveback="1"/>
+	<directive name="end" value="end" moveback="0"/>
+	<directive name="stop" value="stop" moveback="0"/>
+</directives>

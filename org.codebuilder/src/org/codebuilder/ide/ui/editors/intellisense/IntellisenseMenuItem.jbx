@@ -1,0 +1,11 @@
+[PropertyInfo]
+description,String,false,false, , ,false,<default>
+editor,JEditorPane,false,false, , ,false,<default>
+moveBack,int,false,false, , ,false,<default>
+name,String,false,false, , ,false,<default>
+value,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

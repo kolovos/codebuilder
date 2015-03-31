@@ -1,0 +1,12 @@
+[PropertyInfo]
+buttonsPane,javax.swing.JPanel,false,false, , ,false,<default>
+cancelButton,javax.swing.JButton,false,false, , ,false,<default>
+descriptionLabel,javax.swing.JLabel,false,false, , ,false,<default>
+headerPane,javax.swing.JPanel,false,false, , ,false,<default>
+okButton,javax.swing.JButton,false,false, , ,false,<default>
+titleLabel,javax.swing.JLabel,false,false, , ,false,<default>
+[IconNames]
+
+
+
+
